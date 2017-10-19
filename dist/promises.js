@@ -40,7 +40,7 @@ function applyForVisa(documents) {
     console.log('Обработка заявления...');
     var promise = new Promise(function (resolve, reject) {
         setTimeout(function () {
-            Math.random() > 0 ? resolve({}) : reject('В визе отказано: нехватка документов');
+            Math.random() > 0.5 ? resolve({}) : reject('В визе отказано: нехватка документов');
         }, 2000);
     });
     return promise;
@@ -48,7 +48,7 @@ function applyForVisa(documents) {
 
 function getVisa(visa) {
     console.info('ВИза получена');
-    return new Promise.resolve(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
         setTimeout(function () {
             return resolve(visa);
         }, 2000);
@@ -58,7 +58,7 @@ function getVisa(visa) {
 function bookHotel(visa) {
     console.log(visa);
     console.log('Book a hotel');
-    return new Promise.resolve(visa);
+    return Promise.resolve(visa);
 }
 
 function buyTickets(booking) {
