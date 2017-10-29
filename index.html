@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
     <style>
         .div {
             border:1px solid #ccc;
@@ -20,33 +23,61 @@
             padding: 2em;
             box-sizing: border-box;
         }
+        #movies {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        #movies img {
+            display: block;
+            height: 100%;
+            width: auto;
+        }
+        #movies div {
+            flex:1 100px;
+            margin:5px;
+            position: relative;
+        }
+        #movies h3 {
+            position: absolute;
+            left:0;
+            top:0;
+            margin: 0;
+            padding: 0 20px;
+            background: rgba(255,255,255, 0.8);
+            font-size: 18px;
+            line-height: 26px;
+            font-family: Arial, sans-serif;
+        }
     </style>
 
 </head>
 
 <body>
         <!-- LET -->
-        <div class="div">
-            <h2>Let example</h2>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-        </div>
+        <!--<div class="div">-->
+            <!--<h2>Let example</h2>-->
+            <!--<button></button>-->
+            <!--<button></button>-->
+            <!--<button></button>-->
+            <!--<button></button>-->
+            <!--<button></button>-->
+        <!--</div>-->
         <!-- LET END-->
 
         <!-- CONST -->
-        <div class="div">
-            <h2>Const example</h2>
-        </div>
+        <!--<div class="div">-->
+            <!--<h2>Const example</h2>-->
+        <!--</div>-->
         <!-- CONST END-->
 
         <!-- Spread -->
-        <div class="div">
-            <h2>Spread example</h2>
-        </div>
+        <!--<div class="div">-->
+            <!--<h2>Spread example</h2>-->
+        <!--</div>-->
         <!-- Spread END-->
+
+        <h1>Movies</h1>
+        <div id="movies"></div>
 
 
     <script src="dist/script.js"></script>
@@ -58,10 +89,7 @@
     <!--<script src="dist/for_of.js"></script>-->
     <!--<script src="dist/objects.js"></script>-->
     <!--<script src="dist/classes.js"></script>-->
-    <!--<script src="dist/nasledovanie.js"></script>-->
-    <!--<script src="dist/arrow_function.js"></script>-->
-    <!--<script src="dist/distructing.js"></script>-->
-    <!--<script src="dist/distructingobj.js"></script>-->
-    <script src="dist/promises.js"></script>
+    <!--<script src="src/nasledovanie.js">-->
+        <script src="src/promises2.js"></script>
 </body>
 </html>
