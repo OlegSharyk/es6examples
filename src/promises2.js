@@ -6,6 +6,7 @@ function addMovieToList(movie){
     let div = document.createElement('div');
     let h3 = document.createElement('h3');
     let img = document.createElement('img');
+    console.log(movie);
     img.src = movie.Poster;
     div.appendChild(img);
     h3.innerText = movie.Title;
@@ -40,33 +41,36 @@ function getData(url){
 let search = 'batman';
 //let search = 'transformers';
 
-getData(`https://www.omdbapi.com/?apikey=57d13b99&s=${search}`)
+//my api key
+//http://www.omdbapi.com/?i=tt3896198&apikey=22760585
+
+getData(`https://www.omdbapi.com/?apikey=22760585&s=${search}`)
     .then(movies => movies.forEach(movie => addMovieToList(movie)))
     .catch(error => console.error(error));
 
-function go(num){
-    return new Promise(function(resolve,reject){
-        let delay = Math.ceil(Math.random()*3000);
-        console.log(num, delay);
-        setTimeout(() => {
-            if (delay > 2000)
-                reject(num)
-            else
-                resolve(num)
-        }, delay);
-    })
-}
+//function go(num){
+//    return new Promise(function(resolve,reject){
+//        let delay = Math.ceil(Math.random()*3000);
+//        console.log(num, delay);
+//        setTimeout(() => {
+//            if (delay > 2000)
+//                reject(num)
+//            else
+//                resolve(num)
+//        }, delay);
+//    })
+//}
 
-let p1 = go(1);
-let p2 = go(2);
-let p3 = go(3);
+//let p1 = go(1);
+//let p2 = go(2);
+//let p3 = go(3);
 
 //Promise.all([p2,p1,p3])
 //    .then(value => console.log(value))
 //    .catch(error => console.error(error));
-Promise.race([p2,p1,p3])
-    .then(value => console.log(value))
-.catch(error => console.error(error));
+//Promise.race([p2,p1,p3])
+//    .then(value => console.log(value))
+//    .catch(error => console.error(error));
 
 
 //'use strict';

@@ -15,6 +15,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <style>
+        body {
+            margin: 0;
+        }
         .div {
             border:1px solid #ccc;
             background: rgba(0,0,0,.2);
@@ -26,6 +29,8 @@
         #movies {
             display:flex;
             flex-wrap:wrap;
+            box-sizing: border-box;
+            width:100%;
         }
         #movies img {
             display: block;
@@ -80,16 +85,19 @@
         <div id="movies"></div>
 
 
-    <script src="dist/script.js"></script>
-    <!--<script src="src/let.js"></script>-->
-    <!--<script src="dist/const.js"></script>-->
-    <!--<script src="dist/spread.js"></script>-->
-    <!--<script src="dist/template_strings.js"></script>-->
-    <!--<script src="dist/func_parameters.js"></script>-->
-    <!--<script src="dist/for_of.js"></script>-->
-    <!--<script src="dist/objects.js"></script>-->
-    <!--<script src="dist/classes.js"></script>-->
-    <!--<script src="src/nasledovanie.js">-->
-        <script src="src/promises2.js"></script>
+        <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+        <script src="dist/script.js"></script>
+        <!--<script src="src/let.js"></script>-->
+        <!--<script src="dist/const.js"></script>-->
+        <!--<script src="dist/spread.js"></script>-->
+        <!--<script src="dist/template_strings.js"></script>-->
+        <!--<script src="dist/func_parameters.js"></script>-->
+        <!--<script src="dist/for_of.js"></script>-->
+        <!--<script src="dist/objects.js"></script>-->
+        <!--<script src="dist/classes.js"></script>-->
+        <!--<script src="src/nasledovanie.js">-->
+        <!--<script src="src/promises2.js"></script>-->
+        <!--<script src="src/symbols.js"></script>-->
+        <script src="src/iterator.js"></script>
 </body>
 </html>
